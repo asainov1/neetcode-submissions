@@ -1,8 +1,11 @@
-class Solution(object):
-    def isPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
-        new_s = ''.join([i.lower() for i in s if i.isalnum()])
-        return new_s == new_s[::-1]
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower().strip()
+        s = ''.join([c for c in s if c.isalnum()])
+        left, right = 0, len(s) - 1
+        while left < right:
+            if not s[left] == s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
