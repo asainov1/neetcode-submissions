@@ -1,18 +1,16 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        opens = {")":"(", "]":"[","}":"{"}
         stack = []
-        map_i = {"]":"[", ")":"(", "}":"{"}
-        for i in s:
-            if i in map_i:
-                if stack and stack[-1] == map_i[i]: 
-                    stack.pop()
-                else:
-                    return False
-            else:
-                stack.append(i)
-        if not stack:
-            return True
-        else:
-            return False
 
+        for l in s:
+            if l not in opens:
+                stack.append(l)
+            else:
+                if not stack:
+                    return False
+                pops = stack.pop()
+                if pops != opens[l]:
+                    return False      
+        return not stack
 
