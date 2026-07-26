@@ -1,20 +1,21 @@
+from collections import deque
 class Solution:
     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-        from collections import deque
-        attempts,ind = 0, 0
-        students = deque(students)
-        sandwiches = deque(sandwiches)
-
-
-        while students and attempts < len(students):
-            if students[ind] == sandwiches[ind]: 
-                students.popleft()
-                sandwiches.popleft()
-                attempts = 0
+        refused = 0
+        q = deque(students)
+        left = 0
+        while q and left < len(sandwiches):
+            if sandwiches[left] == q[0]:
+                q.popleft()
+                refused = 0
+                left += 1
             else:
-                students.append(students.popleft())
-                attempts += 1
-        return len(students)
+                first = q.popleft()
+                q.append(first)
+                refused += 1
 
-            
-
+            if refused == len(q):
+                return len(q)
+        return refused
+                
+        
