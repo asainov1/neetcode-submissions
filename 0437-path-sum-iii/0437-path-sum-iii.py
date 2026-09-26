@@ -19,7 +19,7 @@ class Solution:
     def visit(self, node):
         if not node:
             return 0
-        return (self.dfs(node, 0) + self.visit(node.left) + self.visit(node.right) )
+        return (self.dfs(node, 0) + self.visit(node.left) + self.visit(node.right))
     
     
     def pathSum(self, root: TreeNode | None, targetSum: int) -> int:
