@@ -77,15 +77,18 @@ Manage your sync preferences at [neetcode.io/profile/github](https://neetcode.io
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/asainov1/neetcode-submissions/tree/master/0207-course-schedule) |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
 | [0437-path-sum-iii](https://github.com/asainov1/neetcode-submissions/tree/master/0437-path-sum-iii) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/asainov1/neetcode-submissions/tree/master/0207-course-schedule) |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
 ## Graph Theory
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/asainov1/neetcode-submissions/tree/master/0207-course-schedule) |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
 ## Topological Sort
 |  |
 | ------- |
@@ -102,4 +105,28 @@ Manage your sync preferences at [neetcode.io/profile/github](https://neetcode.io
 |  |
 | ------- |
 | [0437-path-sum-iii](https://github.com/asainov1/neetcode-submissions/tree/master/0437-path-sum-iii) |
+## Array
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## String
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## Union-Find
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## Shortest Path
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## Bellman–Ford Algorithm
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## Floyd–Warshall Algorithm
+|  |
+| ------- |
+| [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
 <!---LeetCode Topics End-->
