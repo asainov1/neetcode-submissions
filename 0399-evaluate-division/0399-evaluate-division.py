@@ -1,35 +1,41 @@
-from collections import defaultdict
-
 class Solution:
-    def calcEquation(self, equations, values, queries):
-        graph = defaultdict(list)
 
-        for (a, b), value in zip(equations, values):
-            graph[a].append((b, value))
-            graph[b].append((a, 1 / value))
+    def dfs(self, x, y, val):
+        if x == y:
+            return val
 
-        def dfs(current, target, visited):
-            if current == target:
-                return 1.0
-
-            visited.add(current)
-
-            for neighbor, weight in graph[current]:
-                if neighbor in visited:
-                    continue
-
-                result = dfs(neighbor, target, visited)
-                if result != -1.0:
-                    return weight * result
-
+        # Уже были в x во время этого поиска — не ходим по кругу
+        if self.states[x] == 1:
             return -1.0
 
-        answers = []
+        self.states[x] = 1
 
-        for start, target in queries:
-            if start not in graph or target not in graph:
-                answers.append(-1.0)
-            else:
-                answers.append(dfs(start, target, set()))
+        for next_node, weight in self.edges.get(x, []):
+            result = self.dfs(next_node, y, val * weight)
 
-        return answers
+            if result != -1.0:
+                return result
+
+        return -1.0
+
+    def calcEquation(self, equations, values, queries):
+        self.edges = {}
+
+        for (x, y), value in zip(equations, values):
+            self.edges.setdefault(x, []).append((y, value))
+            self.edges.setdefault(y, []).append((x, 1 / value))
+
+        self.result = []
+
+        for x, y in queries:
+            if x not in self.edges or y not in self.edges:
+                self.result.append(-1.0)
+                continue
+
+            # Новый поиск — новые состояния узлов
+            self.states = {node: 0 for node in self.edges}
+
+            val = self.dfs(x, y, 1.0)
+            self.result.append(val)
+
+        return self.result
