@@ -108,6 +108,7 @@ Manage your sync preferences at [neetcode.io/profile/github](https://neetcode.io
 ## Array
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/asainov1/neetcode-submissions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
 ## String
 |  |
@@ -129,4 +130,8 @@ Manage your sync preferences at [neetcode.io/profile/github](https://neetcode.io
 |  |
 | ------- |
 | [0399-evaluate-division](https://github.com/asainov1/neetcode-submissions/tree/master/0399-evaluate-division) |
+## Two Pointers
+|  |
+| ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/asainov1/neetcode-submissions/tree/master/0026-remove-duplicates-from-sorted-array) |
 <!---LeetCode Topics End-->
